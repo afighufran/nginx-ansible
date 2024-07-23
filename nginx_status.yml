@@ -1,0 +1,13 @@
+- name: check nginx status
+  hosts: local
+  become: yes
+  tasks:
+   - name: get nginx service nginx
+     service:
+      name: nginx
+      state: started
+     register: nginx_status
+
+   - name: menampilkan status nginx
+     debug:
+      var: nginx_status
