@@ -1,0 +1,19 @@
+---
+- name: menginstall nginx
+  hosts: local
+  become: yes
+  tasks: 
+   - name: update apt sebelum install nginx
+     apt:
+       update_cache: yes
+
+   - name: install nginx
+     apt:
+       name: nginx
+       state: present
+
+   - name: start nginx service
+     service:
+       name: nginx
+       state: started
+       enabled: yes

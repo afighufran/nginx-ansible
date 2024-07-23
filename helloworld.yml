@@ -1,0 +1,10 @@
+---
+- name: first playbook
+  hosts: local
+  tasks:
+   - name: coba ping
+     ansible.builtin.ping:
+  
+   - name: print message ping
+     ansible.builtin.ping:
+      msg: hello world
