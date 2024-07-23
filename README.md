@@ -2,6 +2,7 @@
 simple ansible project for learning how to use ansible with simple use case
 
 how to use:
+
 `ansible-playbook -i inventory.ini playbook.yml` for install nginx
 
 `ansible-playbook -i inventory.ini helloworld.yml` for ping checking
